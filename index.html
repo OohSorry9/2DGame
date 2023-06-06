@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First 2D Platformer Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/volume.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/2d5f8db393.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <h1 class="title">GAME</h1>
+
+    <div id="menu" class="menu">
+        <div id="soundBtn" class="soundBtn">
+            <button id="volumeDown" class="volume" onclick="decreaseVol()">-</button>
+            <img id="sound" class="sound" src="assets/SoundOn.png" onclick="sound()" alt="">
+            <button id="volumeUp" class="volume" onclick="increaseVol()">+</button>
+        </div>
+
+        <button id="audioPlayStartGame" class="menuBtn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="loseMenu" class="menu" style="display: none;">
+        <div id="soundBtn" class="soundBtn">
+            <button id="volumeDown" class="volume" onclick="decreaseVol()">-</button>
+            <img id="sound" class="sound" src="assets/SoundOn.png" onclick="sound()" alt="">
+            <button id="volumeUp" class="volume" onclick="increaseVol()">+</button>
+        </div>
+        <button class="menuBtn" onclick="tryAgain()">Try Again</button>
+    </div>
+    
+    <canvas id="canvas" style="display: none;"></canvas>
+    <div class="socials">
+        <h3>Follow ShahBhai On Instagram</h3>
+        <p>@Oohsorry_</p>
+        <a href="https://www.instagram.com/oohsorry_/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    </div>
+
+    <!-- SPRITE IMAGES -->
+
+    <img src="assets/notJump.png" id="Player" alt="">
+    <img src="assets/jump.png" id="playerJump" alt="">
+
+        <!-- LEVEL 1 -->
+        
+        <img id="platform"src="assets/platform.png"  alt="">
+        <img id="background" src="assets/background.png" alt="">
+        <img src="assets/hills.png" alt="" id="hills">
+        <img src="assets/bookworm.png" id="bookworm" alt="">
+        <img id="platformTall"src="assets/platformSmallTall.png" alt="">
+        <img src="assets/goldPlatform.png" alt="" id="goldPlatform">
+
+        <!--  -->
+        <!-- LEVEL 2 -->
+
+        <img src="assets/LEVEL2/platform.png" alt="" id="platform2">
+        <img src="assets/LEVEL2/background.png" alt="" id="background2">
+        <img src="assets/LEVEL2/hills.png" alt="" id="hills2">
+        <img src="assets/LEVEL2/platformSmallTall.png" alt="" id="platformTall2">
+
+        <!--  -->
+        <!-- LEVEL 3 -->
+
+        <img id="background3" src="assets/LEVEL 3/background.png" alt="">
+        <img src="assets/LEVEL 3/platform.png" alt="" id="platform3">
+        <img src="assets/LEVEL 3/hills.png" alt="" id="hills3">
+        <img src="assets/LEVEL 3/platformSmallTall.png" alt="" id="platformTall3">
+
+        <!--  -->
+    <!--  -->
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
